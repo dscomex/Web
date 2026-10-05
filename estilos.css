@@ -1,0 +1,64 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#15345f;background:#fff}
+a{color:inherit}
+.topbar{background:#0d315b;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:9px 4%;font-size:14px}
+.topbar a{text-decoration:none}
+.header{height:108px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:#fff;border-bottom:1px solid #ddd}
+.brand img{display:block;width:330px;max-width:42vw;height:auto}
+nav{display:flex;gap:38px}
+nav a{text-decoration:none;font-weight:600;font-size:16px}
+nav a:hover{color:#0a63b5}
+.hero{min-height:430px;position:relative;display:flex;align-items:center;overflow:hidden;background:
+linear-gradient(110deg,rgba(6,40,78,.92),rgba(8,65,115,.68) 48%,rgba(8,25,48,.38)),
+radial-gradient(circle at 12% 72%,#d9a12c 0 8%,transparent 9%),
+linear-gradient(125deg,#173e69 0%,#4f7390 45%,#102e4c 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:
+repeating-linear-gradient(25deg,transparent 0 45px,rgba(255,255,255,.06) 46px 48px);
+opacity:.55}
+.hero-content{position:relative;z-index:2;color:white;padding:50px 8%;max-width:1050px}
+.eyebrow{font-size:16px;letter-spacing:3px;margin:0 0 12px}
+.hero h1{font-size:52px;margin:0 0 8px;letter-spacing:.5px}
+.hero h2{font-size:27px;margin:0 0 18px}
+.hero p:last-child{font-size:22px;text-transform:uppercase;font-weight:600}
+.three-columns{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1200px;margin:auto;padding:46px 4% 42px}
+.three-columns article{padding:0 38px;border-right:1px solid #d8dfe7}
+.three-columns article:last-child{border-right:0}
+.icon{font-size:28px;color:#0a4d94;margin-bottom:8px}
+.three-columns h2,.contact h2{font-size:27px;text-transform:uppercase;margin:0 0 16px;color:#123f78}
+.three-columns p{line-height:1.65;font-size:16px;color:#243f60}
+.three-columns ul{list-style:none;padding:0;margin:0}
+.three-columns li{padding:7px 0 7px 24px;position:relative;color:#243f60}
+.three-columns li:before{content:"✓";position:absolute;left:0;font-weight:bold;color:#0a4d94}
+.banner{min-height:210px;background:
+linear-gradient(90deg,rgba(5,38,76,.92),rgba(15,80,132,.6)),
+linear-gradient(125deg,#0c2f58,#2874a7 48%,#092746);
+display:flex;align-items:center;justify-content:flex-end;padding:30px 9%;color:#fff}
+.banner div{text-align:right;max-width:470px}
+.banner span{display:block;font-size:15px;letter-spacing:2px;margin-bottom:10px}
+.banner strong{display:block;font-size:29px;font-style:italic}
+.contact{display:grid;grid-template-columns:.8fr 1.4fr;gap:60px;max-width:1200px;margin:auto;padding:50px 5%}
+.contact-info p{margin:18px 0;color:#294665}
+.contact-info a{text-decoration:none}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #cbd5df;padding:13px;margin-bottom:12px;font:inherit;color:#18395e}
+.contact-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{width:100%;border:0;background:#0d467f;color:#fff;padding:14px;font-weight:bold;cursor:pointer}
+button:hover{background:#0a63b5}
+footer{background:#0d315b;color:#fff;padding:18px 5%;display:flex;justify-content:space-between;font-size:13px}
+@media(max-width:800px){
+  .topbar{font-size:11px;gap:10px;flex-direction:column;align-items:flex-start}
+  .header{height:auto;padding:18px 5%;flex-direction:column;gap:18px}
+  .brand img{width:290px;max-width:90vw}
+  nav{gap:15px;flex-wrap:wrap;justify-content:center}
+  nav a{font-size:14px}
+  .hero{min-height:360px}
+  .hero h1{font-size:34px}
+  .hero h2{font-size:20px}
+  .hero p:last-child{font-size:16px}
+  .three-columns{grid-template-columns:1fr;padding-top:25px}
+  .three-columns article{border-right:0;border-bottom:1px solid #d8dfe7;padding:25px 10px}
+  .three-columns article:last-child{border-bottom:0}
+  .contact{grid-template-columns:1fr;gap:25px}
+  .contact-form .row{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:8px}
+}
