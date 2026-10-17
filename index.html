@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,5 +21,72 @@
     <section class="gallery" aria-label="Áreas de trabajo"><article class="photo-card"><img src="foto-granos-soja-maiz.jpg" alt="Primer plano de granos de soja y maíz"><h3>Granos y oleaginosas</h3></article><article class="photo-card"><img src="foto-puerto-buque.jpg" alt="Buque portacontenedores y grúas en un puerto"><h3>Comercio exterior</h3></article><article class="photo-card"><img src="foto-camion-contenedor.jpg" alt="Camión con contenedor en ruta"><h3>Transporte terrestre</h3></article><article class="photo-card"><img src="foto-carga-granos.jpg" alt="Carga de granos a granel para exportación"><h3>Carga y logística</h3></article></section>
     <section id="logistica" class="banner"><div><span>LOGÍSTICA Y COMERCIO INTERNACIONAL</span><strong>Desde el origen hasta el destino final.</strong></div></section>
     <section id="contacto" class="contact"><div class="contact-info"><h2>Contacto</h2><p><strong>Buenos Aires, Argentina</strong></p><p><a href="tel:+5491134327000">+54 9 11 34327000</a></p><p><a href="https://wa.me/5491134327000" target="_blank" rel="noopener">WhatsApp</a></p><p><a href="mailto:dscomex@dscomex.com.ar">dscomex@dscomex.com.ar</a></p></div><div class="contact-form"><h2>Envíenos su consulta</h2><form action="mailto:dscomex@dscomex.com.ar" method="post" enctype="text/plain"><div class="row"><input type="text" name="Nombre" placeholder="Nombre" required><input type="text" name="Empresa" placeholder="Empresa"></div><input type="email" name="Email" placeholder="Email" required><textarea name="Mensaje" placeholder="Mensaje" rows="6" required></textarea><button type="submit">ENVIAR CONSULTA</button></form><p class="form-note">El formulario abre el programa de correo de su dispositivo.</p></div></section>
+    <div class="language-selector">
+  <button type="button" onclick="setLanguage('es')">Español</button>
+  <span>|</span>
+  <button type="button" onclick="setLanguage('en')">English</button>
+</div>
+
+<script>
+function setLanguage(lang) {
+  const translations = {
+    en: {
+      "Nosotros": "About Us",
+      "Servicios": "Services",
+      "Productos": "Products",
+      "Logística": "Logistics",
+      "Contacto": "Contact",
+      "TRADING INTERNACIONAL": "INTERNATIONAL TRADING",
+      "COMERCIALIZACIÓN Y LOGÍSTICA DE COMMODITIES": "COMMODITIES TRADING AND LOGISTICS",
+      "Conectamos productores y mercados internacionales.": "Connecting producers and international markets.",
+      "Servicios": "Services",
+      "Trading e intermediación internacional": "International trading and brokerage",
+      "Comercialización de granos": "Grain trading",
+      "Coordinación de exportaciones": "Export coordination",
+      "Logística internacional": "International logistics",
+      "Logística terrestre nacional e internacional": "Domestic and international land transport",
+      "Consolidación de cargas en contenedores": "Container cargo consolidation",
+      "Cargas generales": "General cargo",
+      "Cargas sobredimensionadas": "Oversized cargo",
+      "Cebada": "Barley",
+      "Maíz": "Corn",
+      "Trigo": "Wheat",
+      "Soja": "Soybeans",
+      "Legumbres": "Pulses",
+      "Otros productos según requerimiento": "Other products upon request",
+      "Granos y oleaginosas": "Grains and oilseeds",
+      "Comercio exterior": "Foreign trade",
+      "Transporte terrestre": "Land transport",
+      "Carga y logística": "Cargo and logistics",
+      "LOGÍSTICA Y COMERCIO INTERNACIONAL": "LOGISTICS AND INTERNATIONAL TRADE",
+      "Desde el origen hasta el destino final.": "From origin to final destination.",
+      "Envíenos su consulta": "Send us your inquiry",
+      "ENVIAR CONSULTA": "SEND INQUIRY"
+    }
+  };
+
+  document.querySelectorAll("body *").forEach(function(el) {
+    if (el.children.length === 0) {
+      const original = el.dataset.es || el.textContent.trim();
+      if (!el.dataset.es) el.dataset.es = original;
+      el.textContent = lang === "en" && translations.en[original]
+        ? translations.en[original]
+        : original;
+    }
+  });
+
+  document.querySelectorAll("input[placeholder], textarea[placeholder]").forEach(function(el) {
+    if (!el.dataset.esPlaceholder) el.dataset.esPlaceholder = el.placeholder;
+    const placeholders = {
+      "Nombre": "Name",
+      "Empresa": "Company",
+      "Email": "Email",
+      "Mensaje": "Message"
+    };
+    el.placeholder = lang === "en" ? (placeholders[el.dataset.esPlaceholder] || el.dataset.esPlaceholder) : el.dataset.esPlaceholder;
+  });
+}
+</script>
+</body></html>
   </main><footer><span>DS COMEX SRL &nbsp;|&nbsp; Trading Internacional</span><span>© 2026 DS COMEX SRL. Todos los derechos reservados.</span></footer>
 </body></html>
